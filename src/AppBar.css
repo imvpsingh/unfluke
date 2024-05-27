@@ -1,0 +1,36 @@
+.app-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    background-color: #e8dfdf;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon {
+    position: relative;
+    margin-left: 20px;
+  }
+  
+  .icon img {
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .dropdown-icon {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 12px;
+  }
+  

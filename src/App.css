@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.content {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 200px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.content.selected {
+  background-color: #b9c3ce;
+  color: white;
+}
+.othore{
+  font-family: 'Bungee Inline', cursive;
+  color: red;
+  margin-top: 200px;
+  font-size: 25px;
+}

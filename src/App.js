@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Leaderboard from "./Leaderboard";
+import Tabs from "./Tabs";
+import AppBar from "./appbar";
 
 function App() {
+  const [selectedTab, setSelectedTab] = useState("LeaderBoard");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar />
+      <Tabs selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+      <div
+        className={`content ${selectedTab === "LeaderBoard" ? "selected" : ""}`}
+      >
+        {selectedTab === "LeaderBoard" ? (
+          <Leaderboard />
+        ) : (
+          <div className="othore">Data Not Available in {selectedTab}</div>
+        )}
+      </div>
     </div>
   );
 }
